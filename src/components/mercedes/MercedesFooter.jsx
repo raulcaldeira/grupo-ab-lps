@@ -43,9 +43,9 @@ function MercedesFooter() {
         </div>
 
         {/* IBAMA + Legal text */}
-        <div className="mt-6 pt-4 border-t border-gray-200 flex flex-col sm:flex-row items-center gap-4">
-          <img src={ibamaLogo} alt="IBAMA - Proconve Homologado" className="h-8" />
-          <p className="text-center sm:text-left text-xs text-gray-500 leading-relaxed">
+        <div className="mt-6 pt-4 border-t border-gray-200 flex items-start gap-3 justify-center">
+          <img src={ibamaLogo} alt="IBAMA - Proconve Homologado" className="h-6 flex-shrink-0 mt-0.5" />
+          <p className="text-left text-xs text-gray-500 leading-relaxed">
             Ofertas válidas enquanto durarem os nossos estoques. Consulte condições na concessionária. Reservamo-nos o direito de corrigir possíveis erros de digitação. Imagens meramente ilustrativas.
           </p>
         </div>
