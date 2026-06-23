@@ -56,21 +56,17 @@ function MercedesHero() {
               <p className="text-gray-400 text-lg md:text-xl mb-1">Mercedes-AMG GLE 63 S 4MATIC+ Coupé</p>
             </div>
 
-            {/* Price highlight */}
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 mb-6 inline-block">
-              <p className="text-gray-400 text-sm mb-1">Por apenas</p>
-              <p className="text-3xl md:text-4xl font-extrabold text-white">
-                R$ 1.149.900
-              </p>
-              <div className="mt-3 inline-flex items-center gap-2 bg-mercedes-red/20 text-mercedes-red px-4 py-2 rounded-full">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            {/* Mobile: Price + CTA */}
+            <div className="lg:hidden bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-5 mb-4 text-center">
+              <p className="text-gray-400 text-sm mb-1">A partir de</p>
+              <p className="text-2xl font-extrabold text-white">R$ 1.149.900</p>
+              <div className="mt-2 inline-flex items-center gap-2 bg-mercedes-red/20 text-mercedes-red px-3 py-1.5 rounded-full">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                 </svg>
                 <span className="font-bold text-sm">Blindagem Inclusa</span>
               </div>
             </div>
-
-            {/* Mobile: CTA to scroll to form */}
             <div className="lg:hidden mb-6">
               <button
                 onClick={scrollToForm}
@@ -90,12 +86,25 @@ function MercedesHero() {
             </div>
           </div>
 
-          {/* Right - Form */}
+          {/* Right - Price + Form */}
           <div
             ref={formRef}
             id="formulario"
             className="w-full max-w-md lg:max-w-lg flex-shrink-0 scroll-mt-20"
           >
+            {/* Price highlight */}
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-5 mb-4 text-center">
+              <p className="text-gray-400 text-sm mb-1">A partir de</p>
+              <p className="text-3xl md:text-4xl font-extrabold text-white">
+                R$ 1.149.900
+              </p>
+              <div className="mt-3 inline-flex items-center gap-2 bg-mercedes-red/20 text-mercedes-red px-4 py-2 rounded-full">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+                <span className="font-bold text-sm">Blindagem Inclusa</span>
+              </div>
+            </div>
             <div className="bg-white rounded-2xl shadow-2xl">
               <div className="bg-gradient-to-r from-gray-900 to-black px-6 py-4 rounded-t-2xl">
                 <h2 className="text-white text-xl font-bold text-center">

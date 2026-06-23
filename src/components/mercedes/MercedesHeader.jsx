@@ -20,7 +20,7 @@ function MercedesHeader() {
           <img src={logoGlab} alt="G.lab" className="h-7 md:h-9" />
         </div>
         <div className="flex items-center gap-4">
-          <img src={abIntercarLogo} alt="AB Intercar Mercedes-Benz" className="h-8 md:h-10 invert hidden sm:block" />
+          <img src={abIntercarLogo} alt="AB Intercar Mercedes-Benz" className="h-6 md:h-7 invert hidden sm:block" />
           <button
             onClick={scrollToForm}
             className="bg-mercedes-red text-white text-sm font-bold px-5 py-2 rounded-lg hover:bg-mercedes-red/90 transition-colors cursor-pointer"

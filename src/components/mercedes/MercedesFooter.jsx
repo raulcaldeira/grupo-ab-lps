@@ -38,7 +38,7 @@ function MercedesFooter() {
               Saiba Mais
             </a>
             <div className="w-px h-4 bg-gray-300"></div>
-            <img src={abIntercarLogo} alt="AB Intercar Mercedes-Benz" className="h-6 md:h-7 invert" />
+            <img src={abIntercarLogo} alt="AB Intercar Mercedes-Benz" className="h-5 md:h-6 invert" />
           </div>
         </div>
 
