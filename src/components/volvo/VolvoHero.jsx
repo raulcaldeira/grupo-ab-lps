@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
-import volvoHero from '../../images/volvo/volvo-ex30-hero.webp';
+import volvoHero from '../../images/volvo/volvo-toda-linha.png';
+import volvoLogo from '../../images/volvo/volvo-logo-white.png';
 
 function VolvoHero() {
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -42,6 +43,7 @@ function VolvoHero() {
         <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
           {/* Left - Content */}
           <div className="flex-1 text-center lg:text-left">
+            <img src={volvoLogo} alt="Volvo" className="h-4 md:h-5 mb-4 mx-auto lg:mx-0" />
             <p className="text-volvo-blue font-semibold text-sm tracking-[0.2em] uppercase mb-3">Volvo Cars</p>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white leading-tight mb-4">
               A oferta que você{' '}
@@ -79,11 +81,14 @@ function VolvoHero() {
 
             {/* Hero Image */}
             <div className="flex justify-center lg:justify-start">
-              <img
-                src={volvoHero}
-                alt="Volvo EX30 - Linha completa Volvo"
-                className="w-80 md:w-96 lg:w-[440px] rounded-xl"
-              />
+              <div className="w-80 md:w-96 lg:w-[440px] h-48 md:h-56 lg:h-64 rounded-xl overflow-hidden">
+                <img
+                  src={volvoHero}
+                  alt="Toda Linha Volvo - AB Gotland"
+                  className="w-full h-full object-cover"
+                  style={{ objectPosition: 'center 70%' }}
+                />
+              </div>
             </div>
           </div>
 

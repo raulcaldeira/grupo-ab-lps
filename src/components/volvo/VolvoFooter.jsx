@@ -1,6 +1,7 @@
 import React from 'react';
 import logoEditoraGlobo from '../../images/logo-editora-globo.png';
 import logoGlab from '../../images/logo-glab.png';
+import abGotlandLogo from '../../images/volvo/ab-gotland-logo.png';
 
 function VolvoFooter() {
   const scrollToForm = () => {
@@ -36,7 +37,7 @@ function VolvoFooter() {
               Saiba Mais
             </a>
             <div className="w-px h-4 bg-gray-300"></div>
-            <span className="text-volvo-blue font-bold text-sm">AB GOTLAND</span>
+            <img src={abGotlandLogo} alt="AB Gotland Volvo" className="h-4 md:h-5 invert" />
           </div>
         </div>
 

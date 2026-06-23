@@ -1,6 +1,7 @@
 import React from 'react';
 import logoEditoraGlobo from '../../images/logo-editora-globo.png';
 import logoGlab from '../../images/logo-glab.png';
+import abGotlandLogo from '../../images/volvo/ab-gotland-logo.png';
 
 function VolvoHeader() {
   const scrollToForm = () => {
@@ -19,7 +20,7 @@ function VolvoHeader() {
           <img src={logoGlab} alt="G.lab" className="h-7 md:h-9" />
         </div>
         <div className="flex items-center gap-4">
-          <span className="text-volvo-blue font-bold text-sm hidden sm:block tracking-wide">AB GOTLAND</span>
+          <img src={abGotlandLogo} alt="AB Gotland Volvo" className="h-3.5 md:h-4 hidden sm:block invert" />
           <button
             onClick={scrollToForm}
             className="bg-volvo-blue text-white text-sm font-bold px-5 py-2 rounded-lg hover:bg-volvo-light transition-colors cursor-pointer"
