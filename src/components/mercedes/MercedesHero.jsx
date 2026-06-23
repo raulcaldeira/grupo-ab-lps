@@ -92,8 +92,8 @@ function MercedesHero() {
             id="formulario"
             className="w-full max-w-md lg:max-w-lg flex-shrink-0 scroll-mt-20"
           >
-            {/* Price highlight */}
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-5 mb-4 text-center">
+            {/* Price highlight - desktop only (mobile version is above) */}
+            <div className="hidden lg:block bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-5 mb-4 text-center">
               <p className="text-gray-400 text-sm mb-1">A partir de</p>
               <p className="text-3xl md:text-4xl font-extrabold text-white">
                 R$ 1.149.900

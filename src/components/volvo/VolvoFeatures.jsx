@@ -81,6 +81,7 @@ function VolvoFeatures() {
             src={volvoShowroom}
             alt="Volvo XC90 - Linha completa Volvo"
             className="w-full h-64 md:h-96 object-cover"
+            style={{ objectPosition: 'center 85%' }}
           />
         </div>
 
@@ -118,6 +119,21 @@ function VolvoFeatures() {
               <p className="text-gray-400 text-sm leading-relaxed">{model.description}</p>
             </div>
           ))}
+        </div>
+
+        {/* CTA to client page */}
+        <div className="mt-8 text-center">
+          <a
+            href="https://www.grupoab.com.br/volvo/novos/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-volvo-blue text-white font-bold px-8 py-4 rounded-xl text-lg hover:bg-volvo-light hover:scale-105 transition-all shadow-lg"
+          >
+            Conheça todos os modelos
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
         </div>
       </div>
     </section>
