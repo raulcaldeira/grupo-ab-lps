@@ -129,7 +129,7 @@ function VolvoHero() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-3">Inscrição realizada!</h3>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-3">Enviado com sucesso!</h3>
                     <p className="text-gray-600 leading-relaxed mb-6">
                       Em breve um consultor da <strong className="text-gray-900">AB Gotland</strong> entrará em contato com sua cotação exclusiva Volvo.
                     </p>
@@ -138,7 +138,7 @@ function VolvoHero() {
                         Enquanto isso, conheça mais sobre a linha Volvo:
                       </p>
                       <a
-                        href="https://www.grupoab.com.br/volvo/novos/"
+                        href="https://www.grupoab.com.br/volvo/novos/?utm_source=globo&utm_medium=site_globo&utm_campaign=20260601_volvo"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="mt-3 inline-flex items-center gap-2 text-volvo-blue font-semibold hover:underline"

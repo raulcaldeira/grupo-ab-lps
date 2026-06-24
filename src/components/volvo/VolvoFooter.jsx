@@ -30,7 +30,7 @@ function VolvoFooter() {
             </button>
             <div className="w-px h-4 bg-gray-300"></div>
             <a
-              href="https://www.grupoab.com.br/volvo/novos/"
+              href="https://www.grupoab.com.br/volvo/novos/?utm_source=globo&utm_medium=site_globo&utm_campaign=20260601_volvo"
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm text-gray-500 font-semibold hover:text-gray-900 hover:underline"

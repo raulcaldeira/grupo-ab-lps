@@ -136,7 +136,7 @@ function MercedesHero() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-3">Inscrição realizada!</h3>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-3">Enviado com sucesso!</h3>
                     <p className="text-gray-600 leading-relaxed mb-6">
                       Em breve um consultor da <strong className="text-gray-900">AB Intercar</strong> entrará em contato com sua cotação exclusiva do Mercedes-AMG GLE 63 S.
                     </p>

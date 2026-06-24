@@ -63,6 +63,13 @@ const seo = isVolvo
       },
     };
 
+// Favicon
+const favicon = document.createElement('link');
+favicon.rel = 'icon';
+favicon.type = 'image/svg+xml';
+favicon.href = isVolvo ? '/favicon-volvo.svg' : '/favicon-mercedes.svg';
+document.head.appendChild(favicon);
+
 // Apply SEO tags
 document.title = seo.title;
 

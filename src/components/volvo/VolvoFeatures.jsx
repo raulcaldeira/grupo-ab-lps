@@ -124,7 +124,7 @@ function VolvoFeatures() {
         {/* CTA to client page */}
         <div className="mt-8 text-center">
           <a
-            href="https://www.grupoab.com.br/volvo/novos/"
+            href="https://www.grupoab.com.br/volvo/novos/?utm_source=globo&utm_medium=site_globo&utm_campaign=20260601_volvo"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-volvo-blue text-white font-bold px-8 py-4 rounded-xl text-lg hover:bg-volvo-light hover:scale-105 transition-all shadow-lg"

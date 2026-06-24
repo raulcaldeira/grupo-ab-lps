@@ -1,5 +1,8 @@
 node_modules
 dist
+dist-mercedes
+dist-volvo
+redirect-*.html
 .vercel
 .DS_Store
 *.zip
