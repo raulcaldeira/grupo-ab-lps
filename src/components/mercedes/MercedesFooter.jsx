@@ -1,6 +1,6 @@
 import React from 'react';
 import logoEditoraGlobo from '../../images/logo-editora-globo.png';
-import logoGlab from '../../images/logo-glab.png';
+import logoAutoesporte from '../../images/logo-autoesporte.svg';
 import abIntercarLogo from '../../images/mercedes/ab-intercar-logo.png';
 import ibamaLogo from '../../images/mercedes/ibama.png';
 
@@ -19,7 +19,7 @@ function MercedesFooter() {
           <div className="flex items-center gap-3">
             <img src={logoEditoraGlobo} alt="Editora Globo" className="h-7 md:h-6" />
             <div className="w-px h-6 bg-gray-300"></div>
-            <img src={logoGlab} alt="G.lab" className="h-7 md:h-6" />
+            <img src={logoAutoesporte} alt="Autoesporte" className="h-7 md:h-6" />
           </div>
           <div className="flex items-center gap-4">
             <button
@@ -42,6 +42,16 @@ function MercedesFooter() {
           </div>
         </div>
 
+        {/* Dealer location */}
+        <div className="mt-6 pt-4 border-t border-gray-200">
+          <div className="text-center text-xs text-gray-500">
+            <p className="font-semibold text-gray-700">AB Intercar - Botafogo</p>
+            <p>Rua Assunção, 236</p>
+            <p>Botafogo - Rio de Janeiro - RJ</p>
+            <p>CEP: 22251-030</p>
+          </div>
+        </div>
+
         {/* IBAMA + Legal text */}
         <div className="mt-6 pt-4 border-t border-gray-200 flex items-start gap-3 justify-center">
           <img src={ibamaLogo} alt="IBAMA - Proconve Homologado" className="h-6 flex-shrink-0 mt-0.5" />
@@ -51,7 +61,7 @@ function MercedesFooter() {
         </div>
 
         <p className="text-center text-xs text-gray-600 mt-4">
-          Conteúdo oferecido por AB Intercar Mercedes-Benz. Produzido pelo G.lab para Editora Globo.
+          Conteúdo oferecido por AB Intercar Mercedes-Benz. Produzido pelo Autoesporte para Editora Globo.
         </p>
       </div>
     </footer>

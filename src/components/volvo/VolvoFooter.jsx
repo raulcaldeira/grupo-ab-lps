@@ -1,6 +1,6 @@
 import React from 'react';
 import logoEditoraGlobo from '../../images/logo-editora-globo.png';
-import logoGlab from '../../images/logo-glab.png';
+import logoAutoesporte from '../../images/logo-autoesporte.svg';
 import abGotlandLogo from '../../images/volvo/ab-gotland-logo.png';
 import volvoLogo from '../../images/volvo/volvo-logo-white.png';
 
@@ -19,7 +19,7 @@ function VolvoFooter() {
           <div className="flex items-center gap-3">
             <img src={logoEditoraGlobo} alt="Editora Globo" className="h-7 md:h-6" />
             <div className="w-px h-6 bg-gray-300"></div>
-            <img src={logoGlab} alt="G.lab" className="h-7 md:h-6" />
+            <img src={logoAutoesporte} alt="Autoesporte" className="h-7 md:h-6" />
           </div>
           <div className="flex items-center gap-4">
             <button
@@ -46,19 +46,27 @@ function VolvoFooter() {
 
         {/* Dealer locations */}
         <div className="mt-6 pt-4 border-t border-gray-200">
-          <h3 className="text-sm font-bold text-gray-700 mb-3 text-center">Nossas lojas no Rio de Janeiro</h3>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center text-xs text-gray-500">
             <div>
-              <p className="font-semibold text-gray-700">Barra - Ivan Lins</p>
-              <p>Av. Ivan Lins, Barra da Tijuca</p>
+              <p className="font-semibold text-gray-700">Gotland Veículos Ltda. - Ivan Lins</p>
+              <p>Av. Ministro Ivan Lins, 240</p>
+              <p>Barra da Tijuca - Rio de Janeiro - RJ</p>
+              <p>CEP: 22620-110</p>
+              <p>CNPJ: 04.169.129/0001-89</p>
             </div>
             <div>
-              <p className="font-semibold text-gray-700">Barra - Erico Veríssimo</p>
-              <p>Av. Erico Veríssimo, Barra da Tijuca</p>
+              <p className="font-semibold text-gray-700">Gotland Veículos Ltda. - Erico</p>
+              <p>Av. Érico Veríssimo, 858</p>
+              <p>Barra da Tijuca - Rio de Janeiro - RJ</p>
+              <p>CEP: 22621-180</p>
+              <p>CNPJ: 04.169.129/0002-60</p>
             </div>
             <div>
-              <p className="font-semibold text-gray-700">Botafogo</p>
-              <p>Botafogo, Rio de Janeiro</p>
+              <p className="font-semibold text-gray-700">Gotland Veículos Ltda. - Botafogo</p>
+              <p>Rua Bambina, 43</p>
+              <p>Botafogo - Rio de Janeiro - RJ</p>
+              <p>CEP: 22251-050</p>
+              <p>CNPJ: 04.169.129/0004-21</p>
             </div>
           </div>
         </div>
@@ -71,7 +79,7 @@ function VolvoFooter() {
         </div>
 
         <p className="text-center text-xs text-gray-600 mt-4">
-          Conteúdo oferecido por AB Gotland Volvo. Produzido pelo G.lab para Editora Globo.
+          Conteúdo oferecido por AB Gotland Volvo. Produzido pelo Autoesporte para Editora Globo.
         </p>
       </div>
     </footer>

@@ -1,6 +1,6 @@
 import React from 'react';
 import logoEditoraGlobo from '../../images/logo-editora-globo.png';
-import logoGlab from '../../images/logo-glab.png';
+import logoAutoesporte from '../../images/logo-autoesporte.svg';
 import abGotlandLogo from '../../images/volvo/ab-gotland-logo.png';
 import volvoLogo from '../../images/volvo/volvo-logo-white.png';
 
@@ -18,7 +18,7 @@ function VolvoHeader() {
         <div className="flex items-center gap-3 sm:gap-4">
           <img src={logoEditoraGlobo} alt="Editora Globo" className="h-7 md:h-9" />
           <div className="w-px h-6 bg-gray-300"></div>
-          <img src={logoGlab} alt="G.lab" className="h-7 md:h-9" />
+          <img src={logoAutoesporte} alt="Autoesporte" className="h-7 md:h-9" />
         </div>
         <div className="flex items-center gap-4">
           <img src={abGotlandLogo} alt="AB Gotland" className="h-3.5 md:h-4 hidden sm:block invert" />
