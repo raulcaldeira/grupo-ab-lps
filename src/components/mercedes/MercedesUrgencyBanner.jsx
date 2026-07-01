@@ -6,6 +6,10 @@ function MercedesUrgencyBanner() {
     if (!el) return;
     const y = el.getBoundingClientRect().top + window.scrollY - 64;
     window.scrollTo({ top: y, behavior: 'smooth' });
+    setTimeout(() => {
+      el.classList.add('animate-form-pulse');
+      el.addEventListener('animationend', () => el.classList.remove('animate-form-pulse'), { once: true });
+    }, 700);
   };
 
   return (
