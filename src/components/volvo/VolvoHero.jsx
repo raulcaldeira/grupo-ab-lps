@@ -78,7 +78,7 @@ function VolvoHero() {
             {/* Test-drive badge card */}
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-5 mt-6 w-full text-left flex flex-col gap-2">
               <p className="text-volvo-blue font-bold text-sm tracking-widest uppercase">Test-drive exclusivo</p>
-              <p className="text-white text-sm font-medium">Escolha o modelo que preferir</p>
+              <p className="text-white text-sm font-medium">Escolha o modelo que preferir. Um test-drive exclusivo, preparado sob medida para você por nossos consultores dedicados.</p>
             </div>
           </div>
 
