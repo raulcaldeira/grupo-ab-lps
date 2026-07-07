@@ -47,7 +47,7 @@ function VolvoHero() {
               <img src={volvoLogo} alt="Volvo" className="h-4 md:h-5" />
             </div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white leading-tight mb-4">
-              Descubra qual Volvo{' '}
+              Descubra qual Volvo<br />
               <span className="text-volvo-blue">foi feito para você.</span>
             </h1>
 
@@ -66,19 +66,17 @@ function VolvoHero() {
             </div>
 
             {/* Hero Image */}
-            <div className="flex justify-center lg:justify-start">
-              <div className="w-80 md:w-96 lg:w-[440px] h-56 md:h-64 lg:h-72 rounded-xl overflow-hidden">
-                <img
-                  src={volvoHero}
-                  alt="Toda Linha Volvo - AB Gotland"
-                  className="w-full h-full object-cover"
-                  style={{ objectPosition: 'center 58%' }}
-                />
-              </div>
+            <div className="w-full h-64 md:h-80 lg:h-96 rounded-xl overflow-hidden">
+              <img
+                src={volvoHero}
+                alt="Toda Linha Volvo - AB Gotland"
+                className="w-full h-full object-cover"
+                style={{ objectPosition: 'center 70%' }}
+              />
             </div>
 
             {/* Test-drive badge card */}
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-5 mt-6 w-80 md:w-96 lg:w-[440px] mx-auto lg:mx-0 text-left flex flex-col gap-3">
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-5 mt-6 w-full text-left flex flex-col gap-3">
               <p className="text-volvo-blue font-bold text-sm tracking-widest uppercase">Test-drive exclusivo</p>
               <div className="flex flex-col gap-2">
                 <div className="flex items-center gap-3">
