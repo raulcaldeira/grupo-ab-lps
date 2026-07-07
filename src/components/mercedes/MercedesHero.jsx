@@ -47,36 +47,24 @@ function MercedesHero() {
       </div>
 
       <div className="max-w-content mx-auto px-4 sm:px-6 py-8 md:py-16 relative z-10">
-        <div className="flex flex-col lg:flex-row items-end gap-8 lg:gap-12">
+        <div className="flex flex-col lg:flex-row items-start gap-8 lg:gap-12">
           {/* Left - Content */}
           <div className="flex-1 text-center">
-            {/* Price card - topo da coluna */}
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-5 mb-6 text-center">
-              <p className="text-gray-400 text-sm mb-1">A partir de</p>
-              <p className="text-2xl lg:text-3xl font-extrabold text-white">R$ 1.149.900</p>
-              <div className="mt-2 inline-flex items-center gap-2 bg-mercedes-red/20 text-mercedes-red px-3 py-1.5 rounded-full">
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                </svg>
-                <span className="font-bold text-sm">Blindagem Inclusa</span>
-              </div>
-            </div>
-
             <p className="text-mercedes-red font-semibold text-sm tracking-[0.2em] uppercase mb-3">Mercedes-AMG</p>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white leading-tight mb-4">
-              A oferta que você{' '}
-              <span className="text-mercedes-red">esperava chegou.</span>
+              Sinta o que 612 cv{' '}
+              <span className="text-mercedes-red">fazem com você.</span>
             </h1>
 
             <div className="mb-5">
-              <p className="text-gray-400 text-lg md:text-xl mb-1">Mercedes-AMG GLE 63 S 4MATIC+ Coupé</p>
+              <p className="text-gray-400 text-lg md:text-xl mb-1">Agende seu test-drive exclusivo e viva a experiência AMG.</p>
             </div>
             <div className="lg:hidden mb-6">
               <button
                 onClick={scrollToForm}
                 className="w-full bg-mercedes-red text-white font-bold py-4 rounded-xl text-lg hover:bg-mercedes-red/90 transition-colors cursor-pointer"
               >
-                Solicitar cotação agora
+                Agendar meu test-drive
               </button>
             </div>
 
@@ -87,6 +75,31 @@ function MercedesHero() {
                 alt="Mercedes-AMG GLE 63 S 4MATIC+ Coupé"
                 className="w-full drop-shadow-2xl"
               />
+            </div>
+
+            {/* Test-drive badge card */}
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-5 mt-6 text-left flex flex-col gap-3">
+              <p className="text-mercedes-red font-bold text-sm tracking-widest uppercase">Test-drive exclusivo</p>
+              <div className="flex flex-col gap-2">
+                <div className="flex items-center gap-3">
+                  <svg className="w-5 h-5 text-mercedes-red flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="text-white text-sm font-medium">Sem compromisso de compra</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <svg className="w-5 h-5 text-mercedes-red flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="text-white text-sm font-medium">Consultor dedicado para você</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <svg className="w-5 h-5 text-mercedes-red flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="text-white text-sm font-medium">Disponível no Rio de Janeiro</span>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -99,11 +112,11 @@ function MercedesHero() {
             <div className="bg-white rounded-2xl shadow-2xl">
               <div className="bg-gradient-to-r from-gray-900 to-black px-6 py-4 rounded-t-2xl">
                 <h2 className="text-white text-xl font-bold text-center">
-                  {formSubmitted ? 'Obrigado!' : 'Solicite sua cotação'}
+                  {formSubmitted ? 'Obrigado!' : 'Agende seu test-drive'}
                 </h2>
                 {!formSubmitted && (
                   <p className="text-gray-400 text-sm text-center mt-1">
-                    Preencha os dados abaixo e entraremos em contato
+                    Um consultor exclusivo entrará em contato para confirmar
                   </p>
                 )}
               </div>

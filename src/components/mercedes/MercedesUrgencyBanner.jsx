@@ -20,17 +20,17 @@ function MercedesUrgencyBanner() {
           <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/3"></div>
           <div className="text-center md:text-left relative z-10">
             <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
-              Exclusividade AB Intercar
+              Vagas limitadas para test-drive exclusivo
             </h2>
             <p className="text-red-100 text-lg max-w-xl leading-relaxed">
-              A sua Mercedes-Benz no Rio de Janeiro. Condições especiais por tempo limitado com blindagem inclusa.
+              Experimente o GLE 63 S pessoalmente. Poucas vagas disponíveis no Rio de Janeiro.
             </p>
           </div>
           <button
             onClick={scrollToForm}
             className="relative z-10 bg-white text-gray-900 font-bold px-10 py-4 rounded-xl hover:bg-gray-100 hover:scale-105 transition-all text-lg shadow-lg whitespace-nowrap cursor-pointer"
           >
-            Quero minha cotação
+            Quero meu test-drive
           </button>
         </div>
       </div>
