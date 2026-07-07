@@ -51,7 +51,7 @@ function MercedesHero() {
           {/* Left - Content */}
           <div className="flex-1 text-center">
             <p className="text-mercedes-red font-semibold text-sm tracking-[0.2em] uppercase mb-3">Mercedes-AMG</p>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white leading-tight mb-4">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white leading-tight mb-4">
               Cada detalhe pensado para você.<br />
               <span className="text-mercedes-red">Onde o extraordinário se torna o seu novo padrão.</span>
             </h1>
@@ -69,7 +69,7 @@ function MercedesHero() {
             </div>
 
             {/* Hero Image */}
-            <div className="w-full lg:h-[282px]">
+            <div className="w-full lg:h-[387px]">
               <img
                 src={mercedesExterior}
                 alt="Mercedes-AMG GLE 63 S 4MATIC+ Coupé"
