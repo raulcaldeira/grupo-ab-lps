@@ -66,7 +66,7 @@ function VolvoHero() {
             </div>
 
             {/* Hero Image */}
-            <div className="w-full h-64 md:h-80 lg:h-[358px] rounded-xl overflow-hidden">
+            <div className="w-full h-64 md:h-80 lg:h-[370px] rounded-xl overflow-hidden">
               <img
                 src={volvoHero}
                 alt="Toda Linha Volvo - AB Gotland"

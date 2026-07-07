@@ -69,11 +69,11 @@ function MercedesHero() {
             </div>
 
             {/* Hero Image */}
-            <div className="w-full">
+            <div className="w-full lg:h-[282px]">
               <img
                 src={mercedesExterior}
                 alt="Mercedes-AMG GLE 63 S 4MATIC+ Coupé"
-                className="w-full drop-shadow-2xl"
+                className="w-full h-full object-contain drop-shadow-2xl"
               />
             </div>
 
