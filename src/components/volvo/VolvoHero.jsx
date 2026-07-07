@@ -71,7 +71,7 @@ function VolvoHero() {
                 src={volvoHero}
                 alt="Toda Linha Volvo - AB Gotland"
                 className="w-full h-full object-cover"
-                style={{ objectPosition: 'center 70%' }}
+                style={{ objectPosition: 'center 55%' }}
               />
             </div>
 
