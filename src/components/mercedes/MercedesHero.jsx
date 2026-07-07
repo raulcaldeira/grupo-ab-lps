@@ -116,7 +116,7 @@ function MercedesHero() {
                 </h2>
                 {!formSubmitted && (
                   <p className="text-gray-400 text-sm text-center mt-1">
-                    Um consultor exclusivo entrará em contato para confirmar
+                    Em breve um consultor entrará em contato com você
                   </p>
                 )}
               </div>

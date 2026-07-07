@@ -95,7 +95,7 @@ function VolvoHero() {
                 </h2>
                 {!formSubmitted && (
                   <p className="text-blue-200 text-sm text-center mt-1">
-                    Um consultor exclusivo entrará em contato para confirmar
+                    Em breve um consultor entrará em contato com você
                   </p>
                 )}
               </div>
