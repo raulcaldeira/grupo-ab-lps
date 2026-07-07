@@ -40,34 +40,19 @@ function VolvoHero() {
       </div>
 
       <div className="max-w-content mx-auto px-4 sm:px-6 py-8 md:py-16 relative z-10">
-        <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+        <div className="flex flex-col lg:flex-row items-start gap-8 lg:gap-12">
           {/* Left - Content */}
           <div className="flex-1 text-center lg:text-left">
             <div className="flex justify-center lg:justify-start mb-4">
               <img src={volvoLogo} alt="Volvo" className="h-4 md:h-5" />
             </div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white leading-tight mb-4">
-              A oferta que você{' '}
-              <span className="text-volvo-blue">esperava chegou.</span>
+              Descubra qual Volvo{' '}
+              <span className="text-volvo-blue">foi feito para você.</span>
             </h1>
 
             <div className="mb-5">
-              <p className="text-gray-400 text-lg md:text-xl mb-1">Toda Linha Volvo</p>
-            </div>
-
-            {/* Offer highlight */}
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 mb-6 w-80 md:w-96 lg:w-[440px] mx-auto lg:mx-0 text-center lg:text-left">
-              <p className="text-gray-400 text-sm mb-1">Condições exclusivas</p>
-              <p className="text-2xl md:text-3xl font-extrabold text-white">
-                Taxa Zero
-              </p>
-              <p className="text-gray-400 text-base mt-1">ou Super Avaliação do Seu Seminovo</p>
-              <div className="mt-3 inline-flex items-center gap-2 bg-volvo-blue/20 text-volvo-blue px-4 py-2 rounded-full">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                </svg>
-                <span className="font-bold text-sm">Exclusividade AB Gotland</span>
-              </div>
+              <p className="text-gray-400 text-lg md:text-xl mb-1">Agende seu test-drive exclusivo e experimente toda a linha Volvo.</p>
             </div>
 
             {/* Mobile: CTA to scroll to form */}
@@ -76,7 +61,7 @@ function VolvoHero() {
                 onClick={scrollToForm}
                 className="w-full bg-volvo-blue text-white font-bold py-4 rounded-xl text-lg hover:bg-volvo-light transition-colors cursor-pointer"
               >
-                Solicitar cotação agora
+                Agendar meu test-drive
               </button>
             </div>
 
@@ -91,6 +76,31 @@ function VolvoHero() {
                 />
               </div>
             </div>
+
+            {/* Test-drive badge card */}
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-5 mt-6 w-80 md:w-96 lg:w-[440px] mx-auto lg:mx-0 text-left flex flex-col gap-3">
+              <p className="text-volvo-blue font-bold text-sm tracking-widest uppercase">Test-drive exclusivo</p>
+              <div className="flex flex-col gap-2">
+                <div className="flex items-center gap-3">
+                  <svg className="w-5 h-5 text-volvo-blue flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="text-white text-sm font-medium">Escolha o modelo que preferir</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <svg className="w-5 h-5 text-volvo-blue flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="text-white text-sm font-medium">Sem compromisso de compra</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <svg className="w-5 h-5 text-volvo-blue flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="text-white text-sm font-medium">Disponível no Rio de Janeiro</span>
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Right - Form */}
@@ -102,11 +112,11 @@ function VolvoHero() {
             <div className="bg-white rounded-2xl shadow-2xl">
               <div className="bg-gradient-to-r from-volvo-blue to-volvo-light px-6 py-4 rounded-t-2xl">
                 <h2 className="text-white text-xl font-bold text-center">
-                  {formSubmitted ? 'Obrigado!' : 'Solicite sua cotação'}
+                  {formSubmitted ? 'Obrigado!' : 'Agende seu test-drive'}
                 </h2>
                 {!formSubmitted && (
                   <p className="text-blue-200 text-sm text-center mt-1">
-                    Preencha os dados abaixo e entraremos em contato
+                    Um consultor exclusivo entrará em contato para confirmar
                   </p>
                 )}
               </div>
