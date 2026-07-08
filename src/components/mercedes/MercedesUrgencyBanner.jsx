@@ -23,14 +23,14 @@ function MercedesUrgencyBanner() {
               Vagas limitadas para test-drive exclusivo
             </h2>
             <p className="text-red-100 text-lg max-w-xl leading-relaxed">
-              Experimente o GLE 63 S pessoalmente. Poucas vagas disponíveis no Rio de Janeiro.
+              Experimente o GLE 63 S. Vagas limitadas, agende agora.
             </p>
           </div>
           <button
             onClick={scrollToForm}
             className="relative z-10 bg-white text-gray-900 font-bold px-10 py-4 rounded-xl hover:bg-gray-100 hover:scale-105 transition-all text-lg shadow-lg whitespace-nowrap cursor-pointer"
           >
-            Quero meu test-drive
+            Agendar meu test-drive
           </button>
         </div>
       </div>
