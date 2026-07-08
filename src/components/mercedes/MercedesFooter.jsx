@@ -30,7 +30,7 @@ function MercedesFooter() {
               onClick={scrollToForm}
               className="text-sm text-mercedes-red font-semibold hover:underline cursor-pointer"
             >
-              Solicitar cotação
+              Agendar test-drive
             </button>
             <div className="w-px h-4 bg-gray-300"></div>
             <a
