@@ -23,7 +23,7 @@ function MercedesUrgencyBanner() {
               Vagas limitadas para test-drive exclusivo
             </h2>
             <p className="text-red-100 text-lg max-w-xl leading-relaxed">
-              Experimente o GLE 63 S. Vagas limitadas, agende agora.
+              Experimente o seu Mercedes. Vagas limitadas, agende agora.
             </p>
           </div>
           <button
