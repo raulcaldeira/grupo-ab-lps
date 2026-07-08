@@ -26,7 +26,7 @@ function VolvoFooter() {
               onClick={scrollToForm}
               className="text-sm text-volvo-blue font-semibold hover:underline cursor-pointer"
             >
-              Solicitar cotação
+              Agendar test-drive
             </button>
             <div className="w-px h-4 bg-gray-300"></div>
             <a
