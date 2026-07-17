@@ -2,6 +2,7 @@
   "rewrites": [
     { "source": "/volvo", "destination": "/index.html" },
     { "source": "/volvo/(.*)", "destination": "/index.html" },
-    { "source": "/(.*)", "destination": "/index.html" }
+    { "source": "/mercedes", "destination": "/index.html" },
+    { "source": "/mercedes/(.*)", "destination": "/index.html" }
   ]
 }
