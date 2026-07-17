@@ -8,7 +8,7 @@ function MercedesHero({ selectedModelId, onSelectModel }) {
   const formRef = useRef(null);
 
   const model = MODELS.find((m) => m.id === selectedModelId);
-  const heroImage = model.heroImageUrl ?? gleExterior;
+  const heroImage = model.formImageUrl ?? model.heroImageUrl ?? gleExterior;
 
   const scrollToForm = (modelId) => {
     if (modelId) onSelectModel(modelId);
@@ -91,6 +91,9 @@ function MercedesHero({ selectedModelId, onSelectModel }) {
                     className="w-full h-full object-contain scale-110 group-hover:scale-125 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_45%,rgb(10,10,10)_85%)] pointer-events-none" />
+                  <div className="absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-gray-900 to-transparent pointer-events-none" />
+                  <div className="absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-gray-900 to-transparent pointer-events-none" />
+                  <div className="absolute inset-x-0 bottom-0 h-12 bg-gradient-to-t from-black to-transparent pointer-events-none" />
                 </div>
 
                 {/* Info */}
@@ -168,7 +171,6 @@ function MercedesHero({ selectedModelId, onSelectModel }) {
                   className="w-full object-contain"
                   style={{ height: 240 }}
                 />
-                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_45%,rgb(10,10,10)_85%)] pointer-events-none" />
               </div>
 
               {/* Exclusivity note — mt-auto empurra para o fundo da coluna */}

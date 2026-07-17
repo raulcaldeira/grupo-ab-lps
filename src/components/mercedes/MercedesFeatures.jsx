@@ -1,111 +1,115 @@
 import React from 'react';
-import mercedesInterior from '../../images/mercedes/mercedes-gle-interior.jpg';
+import { MODELS } from './mercedesData';
+import gleInterior from '../../images/mercedes/mercedes-gle-interior.jpg';
+import glbInteriorFallback from '../../images/mercedes/mercedes-gle-interior.jpg';
 
-const features = [
-  {
-    icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-      </svg>
-    ),
-    title: '612 cv de potência',
-    description: 'Motor V8 biturbo de 4.0L com 612 cv e 850 Nm de torque para uma performance brutal.',
-  },
-  {
-    icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-      </svg>
-    ),
-    title: '0 a 100 km/h em 3,8s',
-    description: 'Aceleração esportiva com a tecnologia AMG que leva a performance ao limite.',
-  },
-  {
-    icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-      </svg>
-    ),
-    title: 'Blindagem inclusa',
-    description: 'Proteção balística de fábrica para sua total segurança e tranquilidade no dia a dia.',
-  },
-  {
-    icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
-      </svg>
-    ),
-    title: 'Tração 4MATIC+',
-    description: 'Sistema de tração integral inteligente que distribui o torque de forma ideal em qualquer condição.',
-  },
-  {
-    icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-      </svg>
-    ),
-    title: 'MBUX de última geração',
-    description: 'Sistema de infotainment com telas de alta resolução, comandos de voz e inteligência artificial.',
-  },
-  {
-    icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-      </svg>
-    ),
-    title: 'Interior premium',
-    description: 'Acabamento em couro Nappa, iluminação ambiente de 64 cores e bancos com ajuste elétrico.',
-  },
-];
+const ICONS = {
+  bolt: (
+    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+    </svg>
+  ),
+  clock: (
+    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+    </svg>
+  ),
+  shield: (
+    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+    </svg>
+  ),
+  grid4: (
+    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
+    </svg>
+  ),
+  monitor: (
+    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+    </svg>
+  ),
+  star: (
+    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+    </svg>
+  ),
+  key: (
+    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
+    </svg>
+  ),
+  wifi: (
+    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0" />
+    </svg>
+  ),
+  users: (
+    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+    </svg>
+  ),
+  sliders: (
+    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+    </svg>
+  ),
+  chart: (
+    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+    </svg>
+  ),
+  arrows: (
+    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4" />
+    </svg>
+  ),
+};
 
-function MercedesFeatures() {
+function MercedesFeatures({ selectedModelId }) {
+  const model = MODELS.find((m) => m.id === selectedModelId);
+  const interiorImage = model.interiorImageUrl ?? gleInterior;
+
   return (
     <section className="bg-gray-950 py-14 md:py-20">
       <div className="max-w-content mx-auto px-4 sm:px-6">
         <h2 className="text-2xl md:text-3xl font-bold text-center text-white mb-2">
-          Performance e luxo sem igual
+          {model.id === 'glc' ? 'Performance e estilo sem igual' : 'Luxo, tecnologia e desempenho'}
         </h2>
         <p className="text-gray-400 text-center mb-10 max-w-2xl mx-auto">
-          O Mercedes-AMG GLE 63 S combina a brutalidade de um esportivo com o conforto de um SUV premium.
+          {model.id === 'glb' && 'O GLB combina espaço para toda a família com a qualidade e tecnologia que só a Mercedes-Benz oferece.'}
+          {model.id === 'glc' && 'O AMG GLC 43 entrega a adrenalina de um esportivo com a praticidade e luxo de um SUV premium.'}
+          {model.id === 'gle' && 'O GLE redefine o padrão de conforto e sofisticação com tecnologia de ponta em cada detalhe.'}
         </p>
 
-        {/* Interior image showcase */}
+        {/* Interior / feature image */}
         <div className="mb-12 rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10">
           <img
-            src={mercedesInterior}
-            alt="Interior Mercedes-AMG GLE 63 S"
+            src={interiorImage}
+            alt={`Interior ${model.name}`}
             className="w-full h-64 md:h-96 object-cover"
           />
         </div>
 
         {/* Stats bar */}
         <div className="flex flex-wrap justify-center gap-8 md:gap-16 mb-12 py-6 border-y border-gray-800">
-          <div className="text-center">
-            <p className="text-3xl md:text-4xl font-extrabold text-mercedes-red">612 cv</p>
-            <p className="text-sm text-gray-500 mt-1">de potência</p>
-          </div>
-          <div className="text-center">
-            <p className="text-3xl md:text-4xl font-extrabold text-mercedes-red">3,8s</p>
-            <p className="text-sm text-gray-500 mt-1">0 a 100 km/h</p>
-          </div>
-          <div className="text-center">
-            <p className="text-3xl md:text-4xl font-extrabold text-mercedes-red">V8</p>
-            <p className="text-sm text-gray-500 mt-1">biturbo<br />4.0L</p>
-          </div>
-          <div className="text-center">
-            <p className="text-3xl md:text-4xl font-extrabold text-mercedes-red">850 Nm</p>
-            <p className="text-sm text-gray-500 mt-1">de torque</p>
-          </div>
+          {model.stats.map((stat, i) => (
+            <div key={i} className="text-center">
+              <p className="text-3xl md:text-4xl font-extrabold text-mercedes-red">{stat.value}</p>
+              <p className="text-sm text-gray-500 mt-1">{stat.label}</p>
+            </div>
+          ))}
         </div>
 
+        {/* Features grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {features.map((feature, index) => (
+          {model.features.map((feature, index) => (
             <div
               key={index}
               className="bg-gray-900 rounded-xl p-7 shadow-card hover:shadow-lg hover:-translate-y-1 transition-all border border-gray-800 group"
             >
               <div className="w-12 h-12 bg-mercedes-red/10 text-mercedes-red rounded-lg flex items-center justify-center mb-4 group-hover:bg-mercedes-red group-hover:text-white transition-colors">
-                {feature.icon}
+                {ICONS[feature.icon] ?? ICONS.bolt}
               </div>
               <h3 className="text-lg font-bold text-white mb-2">{feature.title}</h3>
               <p className="text-gray-400 text-sm leading-relaxed">{feature.description}</p>
@@ -113,17 +117,22 @@ function MercedesFeatures() {
           ))}
         </div>
 
-        {/* CTA to client page */}
+        {/* CTA */}
         <div className="mt-8 text-center">
           <a
-            href="https://www.grupoab.com.br/mercedes-benz/novos/amg-gle-63-4matic/?utm_source=globo&utm_medium=site_globo&utm_campaign=20260601_mercedes"
+            href={model.dealerUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-mercedes-red text-white font-bold px-8 py-4 rounded-xl text-lg hover:bg-mercedes-red/90 hover:scale-105 transition-all shadow-lg"
           >
-            Conheça todos os detalhes do modelo
+            Conheça todos os detalhes do {model.shortName}
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+              />
             </svg>
           </a>
         </div>

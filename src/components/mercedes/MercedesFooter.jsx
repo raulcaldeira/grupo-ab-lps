@@ -3,8 +3,11 @@ import logoEditoraGlobo from '../../images/logo-editora-globo.png';
 import logoAutoesporte from '../../images/logo-autoesporte.svg';
 import abIntercarLogo from '../../images/mercedes/ab-intercar-logo.png';
 import ibamaLogo from '../../images/mercedes/ibama.png';
+import { MODELS } from './mercedesData';
 
-function MercedesFooter() {
+function MercedesFooter({ selectedModelId }) {
+  const model = MODELS.find((m) => m.id === selectedModelId) ?? MODELS[0];
+
   const scrollToForm = () => {
     const el = document.getElementById('formulario');
     if (!el) return;
@@ -34,7 +37,7 @@ function MercedesFooter() {
             </button>
             <div className="w-px h-4 bg-gray-300"></div>
             <a
-              href="https://www.grupoab.com.br/mercedes-benz/novos/amg-gle-63-4matic/?utm_source=globo&utm_medium=site_globo&utm_campaign=20260601_mercedes"
+              href={model.dealerUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm text-gray-500 font-semibold hover:text-gray-900 hover:underline"
@@ -60,7 +63,8 @@ function MercedesFooter() {
         <div className="mt-6 pt-4 border-t border-gray-200 flex items-start gap-3 justify-center">
           <img src={ibamaLogo} alt="IBAMA - Proconve Homologado" className="h-6 flex-shrink-0 mt-0.5" />
           <p className="text-left text-xs text-gray-500 leading-relaxed">
-            Ofertas válidas enquanto durarem os nossos estoques. Consulte condições na concessionária. Reservamo-nos o direito de corrigir possíveis erros de digitação. Imagens meramente ilustrativas.
+            Ofertas válidas enquanto durarem os nossos estoques. Consulte condições na concessionária. Reservamo-nos o
+            direito de corrigir possíveis erros de digitação. Imagens meramente ilustrativas.
           </p>
         </div>
 
