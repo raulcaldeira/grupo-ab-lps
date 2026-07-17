@@ -5,7 +5,20 @@ import gleExterior from '../../images/mercedes/mercedes-gle-exterior.png';
 function MercedesHero({ selectedModelId, onSelectModel }) {
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [formHeight, setFormHeight] = useState(660);
+  const [pulseId, setPulseId] = useState(null);
   const formRef = useRef(null);
+
+  useEffect(() => {
+    const ids = MODELS.map((m) => m.id).filter((id) => id !== selectedModelId);
+    let i = 0;
+    const next = () => {
+      if (i >= ids.length) { setPulseId(null); return; }
+      setPulseId(ids[i++]);
+      setTimeout(next, 700);
+    };
+    const t = setTimeout(next, 900);
+    return () => clearTimeout(t);
+  }, []);
 
   const model = MODELS.find((m) => m.id === selectedModelId);
   const heroImage = model.formImageUrl ?? model.heroImageUrl ?? gleExterior;
@@ -66,6 +79,7 @@ function MercedesHero({ selectedModelId, onSelectModel }) {
           {MODELS.map((m) => {
             const img = m.heroImageUrl ?? gleExterior;
             const isSelected = m.id === selectedModelId;
+            const isPulsing = m.id === pulseId;
             return (
               <button
                 key={m.id}
@@ -73,6 +87,8 @@ function MercedesHero({ selectedModelId, onSelectModel }) {
                 className={`group relative rounded-2xl overflow-hidden text-left transition-all duration-300 cursor-pointer border-2 ${
                   isSelected
                     ? 'border-mercedes-red shadow-[0_0_30px_rgba(155,27,48,0.4)]'
+                    : isPulsing
+                    ? 'border-mercedes-red/70 shadow-[0_0_20px_rgba(155,27,48,0.3)] scale-[1.02]'
                     : 'border-white/10 hover:border-mercedes-red/50 hover:shadow-[0_0_20px_rgba(155,27,48,0.2)]'
                 }`}
               >
@@ -112,11 +128,6 @@ function MercedesHero({ selectedModelId, onSelectModel }) {
                     <div>
                       <p className="text-mercedes-red font-extrabold text-lg leading-none">{m.stats[1].value}</p>
                       <p className="text-gray-500 text-xs mt-0.5">{m.stats[1].label}</p>
-                    </div>
-                    <div className="w-px bg-gray-800" />
-                    <div>
-                      <p className="text-white font-bold text-sm leading-none">{m.price}</p>
-                      <p className="text-gray-500 text-xs mt-0.5">a partir de</p>
                     </div>
                   </div>
 
