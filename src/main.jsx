@@ -32,34 +32,38 @@ const seo = isVolvo
       },
     }
   : {
-      title: 'Mercedes-AMG GLE 63 S 4MATIC+ Coupé | AB Intercar',
+      title: 'SUVs Mercedes-Benz | Test-drive Exclusivo | AB Intercar Botafogo',
       description:
-        'Mercedes-AMG GLE 63 S 4MATIC+ Coupé com 612 cv e condições exclusivas na AB Intercar. Solicite sua cotação agora.',
-      ogTitle: 'Mercedes-AMG GLE 63 S 4MATIC+ Coupé | AB Intercar',
+        'Escolha entre GLB 220 4MATIC, AMG GLC 43 4MATIC e GLE 450 4MATIC. Agende seu test-drive exclusivo na AB Intercar Botafogo com consultores dedicados.',
+      ogTitle: 'SUVs Mercedes-Benz | Test-drive Exclusivo | AB Intercar',
       ogDescription:
-        'Mercedes-AMG GLE 63 S com 612 cv. Condições exclusivas na AB Intercar. Solicite sua cotação.',
+        'GLB, AMG GLC 43 e GLE 450 disponíveis agora. Agende seu test-drive exclusivo na AB Intercar Botafogo.',
       structuredData: {
         '@context': 'https://schema.org',
-        '@type': 'Product',
-        name: 'Mercedes-AMG GLE 63 S 4MATIC+ Coupé',
+        '@type': 'ItemList',
+        name: 'SUVs Mercedes-Benz — AB Intercar Botafogo',
         description:
-          'SUV esportivo de alto desempenho com motor V8 biturbo de 612 cv, tração integral 4MATIC+ e acabamento AMG.',
-        brand: { '@type': 'Brand', name: 'Mercedes-Benz' },
-        category: 'SUV Esportivo',
-        offers: {
-          '@type': 'Offer',
-          availability: 'https://schema.org/InStock',
-          priceCurrency: 'BRL',
-        },
-        vehicleEngine: {
-          '@type': 'EngineSpecification',
-          fuelType: 'Gasolina',
-          enginePower: {
-            '@type': 'QuantitativeValue',
-            value: '612',
-            unitCode: 'BHP',
+          'Três SUVs premium Mercedes-Benz disponíveis para test-drive exclusivo na AB Intercar Botafogo: GLB 220 4MATIC, AMG GLC 43 4MATIC e GLE 450 4MATIC.',
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'GLB 220 4MATIC',
+            url: 'https://www.grupoab.com.br/mercedes-benz/',
           },
-        },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'AMG GLC 43 4MATIC',
+            url: 'https://www.grupoab.com.br/mercedes-benz/',
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: 'GLE 450 4MATIC',
+            url: 'https://www.grupoab.com.br/mercedes-benz/',
+          },
+        ],
       },
     };
 

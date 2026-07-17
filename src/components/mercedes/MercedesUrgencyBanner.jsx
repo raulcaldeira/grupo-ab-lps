@@ -13,7 +13,7 @@ function MercedesUrgencyBanner() {
   };
 
   return (
-    <section className="bg-gray-950 pt-4 pb-12 md:pt-6 md:pb-16">
+    <section className="bg-gray-950 pt-2 pb-12 md:pt-3 md:pb-16">
       <div className="max-w-content mx-auto px-4 sm:px-6">
         <div className="bg-gradient-to-r from-mercedes-red to-red-900 rounded-2xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl relative overflow-hidden">
           {/* Decorative element */}
@@ -23,7 +23,7 @@ function MercedesUrgencyBanner() {
               Vagas limitadas para test-drive exclusivo
             </h2>
             <p className="text-red-100 text-lg max-w-xl leading-relaxed">
-              Experimente o seu Mercedes. Vagas limitadas, agende agora.
+              Nossos consultores aguardam você na AB Intercar Botafogo. Garanta a sua vaga.
             </p>
           </div>
           <button
