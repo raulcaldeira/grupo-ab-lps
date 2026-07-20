@@ -1,7 +1,6 @@
 import React from 'react';
 import { MODELS } from './mercedesData';
 import gleInterior from '../../images/mercedes/mercedes-gle-interior.jpg';
-import glbInteriorFallback from '../../images/mercedes/mercedes-gle-interior.jpg';
 
 const ICONS = {
   bolt: (
