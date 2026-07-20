@@ -156,7 +156,7 @@ function MercedesHero({ selectedModelId, onSelectModel }) {
         >
           <div className="flex flex-col lg:flex-row items-stretch gap-8 lg:gap-12">
             {/* Left — selected model summary */}
-            <div className="flex-1 flex flex-col">
+            <div className="flex-1 flex flex-col order-last lg:order-first">
               <p className="text-mercedes-red font-semibold text-sm tracking-[0.2em] uppercase mb-3">{model.badge}</p>
               <h2 className="text-3xl md:text-4xl font-extrabold text-white leading-tight mb-3">
                 {model.tagline}<br />
@@ -195,11 +195,11 @@ function MercedesHero({ selectedModelId, onSelectModel }) {
             </div>
 
             {/* Right — form */}
-            <div className="w-full max-w-md lg:max-w-lg flex-shrink-0">
+            <div className="w-full max-w-md lg:max-w-lg flex-shrink-0 mx-auto lg:mx-0 order-first lg:order-last">
               <div className="bg-white rounded-2xl shadow-2xl">
                 <div className="bg-gradient-to-r from-gray-900 to-black px-6 py-4 rounded-t-2xl">
                   <h3 className="text-white text-xl font-bold text-center">
-                    {formSubmitted ? 'Obrigado!' : `Agende seu test-drive — ${model.shortName}`}
+                    {formSubmitted ? 'Obrigado!' : 'Agende seu test-drive'}
                   </h3>
                   {!formSubmitted && (
                     <p className="text-gray-400 text-sm text-center mt-1">
