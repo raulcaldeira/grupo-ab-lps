@@ -68,7 +68,7 @@ function MercedesHero({ selectedModelId, onSelectModel }) {
             <span className="text-mercedes-red">e agende seu test-drive exclusivo.</span>
           </h1>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Três modelos premium disponíveis agora. Compare, escolha e viva a experiência ao volante com nossos consultores dedicados.
+            Toda linha GL premium disponível agora. Compare, escolha e viva a experiência ao volante com nossos consultores dedicados.
           </p>
         </div>
       </div>
@@ -179,7 +179,7 @@ function MercedesHero({ selectedModelId, onSelectModel }) {
                 <img
                   src={heroImage}
                   alt={model.name}
-                  className="w-full object-contain"
+                  className="w-full object-cover"
                   style={{ height: 240 }}
                 />
               </div>

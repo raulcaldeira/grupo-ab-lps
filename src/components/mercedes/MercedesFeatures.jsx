@@ -66,44 +66,72 @@ const ICONS = {
   ),
 };
 
+const MODEL_HIGHLIGHTS = [
+  { id: 'glb', label: 'GLB 220 4MATIC', stats: ['190 cv', '7 lugares', '4MATIC'], tagline: 'Espaço para toda a família' },
+  { id: 'glc', label: 'AMG GLC 43 4MATIC', stats: ['421 cv', '4,7s 0–100', 'V6 Biturbo'], tagline: 'Performance esportiva pura' },
+  { id: 'gle', label: 'GLE 450 4MATIC', stats: ['367 cv', 'EQ Boost', 'Suspensão a Ar'], tagline: 'Luxo e sofisticação supremos' },
+];
+
+const SHARED_FEATURES = [
+  { icon: 'grid4', title: 'Tração 4MATIC', description: 'Sistema de tração integral inteligente presente nos 3 modelos — estabilidade total em qualquer superfície.' },
+  { icon: 'monitor', title: 'MBUX com Inteligência Artificial', description: 'Central multimídia com comandos de voz, navegação por IA e integração total ao ecossistema Mercedes Me.' },
+  { icon: 'bolt', title: 'Motores Turbo de Alta Performance', description: 'De 190 cv a 421 cv: cada modelo GL entrega potência, eficiência e resposta instantânea ao acelerador.' },
+  { icon: 'shield', title: 'Segurança PRE-SAFE®', description: 'Sistema preventivo que detecta risco de colisão e aciona proteções ativas antes do impacto acontecer.' },
+  { icon: 'star', title: 'Interior Premium Mercedes', description: 'Acabamentos em couro genuíno, iluminação ambiente e materiais de alto padrão em todos os modelos GL.' },
+  { icon: 'wifi', title: 'Conectividade Total', description: 'Apple CarPlay, Android Auto, carregamento sem fio e atualizações over-the-air integrados de série.' },
+];
+
 function MercedesFeatures({ selectedModelId }) {
   const model = MODELS.find((m) => m.id === selectedModelId);
-  const interiorImage = model.interiorImageUrl ?? gleInterior;
 
   return (
     <section className="bg-gray-950 py-14 md:py-20">
       <div className="max-w-content mx-auto px-4 sm:px-6">
         <h2 className="text-2xl md:text-3xl font-bold text-center text-white mb-2">
-          {model.id === 'glc' ? 'Performance e estilo sem igual' : 'Luxo, tecnologia e desempenho'}
+          A linha GL Mercedes-Benz
         </h2>
         <p className="text-gray-400 text-center mb-10 max-w-2xl mx-auto">
-          {model.id === 'glb' && 'O GLB combina espaço para toda a família com a qualidade e tecnologia que só a Mercedes-Benz oferece.'}
-          {model.id === 'glc' && 'O AMG GLC 43 entrega a adrenalina de um esportivo com a praticidade e luxo de um SUV premium.'}
-          {model.id === 'gle' && 'O GLE redefine o padrão de conforto e sofisticação com tecnologia de ponta em cada detalhe.'}
+          Três SUVs premium com DNA Mercedes-Benz — cada um com seu perfil, todos com o mesmo padrão de excelência.
         </p>
 
-        {/* Interior / feature image */}
+        {/* Interior image */}
         <div className="mb-12 rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10">
           <img
-            src={interiorImage}
-            alt={`Interior ${model.name}`}
+            src={gleInterior}
+            alt="Interior Mercedes-Benz GL"
             className="w-full h-64 md:h-96 object-cover"
           />
         </div>
 
-        {/* Stats bar */}
-        <div className="flex flex-wrap justify-center gap-8 md:gap-16 mb-12 py-6 border-y border-gray-800">
-          {model.stats.map((stat, i) => (
-            <div key={i} className="text-center">
-              <p className="text-3xl md:text-4xl font-extrabold text-mercedes-red">{stat.value}</p>
-              <p className="text-sm text-gray-500 mt-1">{stat.label}</p>
+        {/* 3-model comparison bar */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-12">
+          {MODEL_HIGHLIGHTS.map((m) => (
+            <div
+              key={m.id}
+              className={`rounded-xl p-5 border text-center transition-colors ${
+                m.id === selectedModelId
+                  ? 'border-mercedes-red bg-mercedes-red/10'
+                  : 'border-gray-800 bg-gray-900'
+              }`}
+            >
+              <p className={`text-xs font-bold tracking-widest uppercase mb-1 ${m.id === selectedModelId ? 'text-mercedes-red' : 'text-gray-500'}`}>
+                {m.label}
+              </p>
+              <p className="text-white text-sm mb-3">{m.tagline}</p>
+              <div className="flex justify-center gap-3">
+                {m.stats.map((s, i) => (
+                  <span key={i} className="text-mercedes-red font-extrabold text-sm bg-black/30 px-2 py-1 rounded-lg">
+                    {s}
+                  </span>
+                ))}
+              </div>
             </div>
           ))}
         </div>
 
-        {/* Features grid */}
+        {/* Shared features grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {model.features.map((feature, index) => (
+          {SHARED_FEATURES.map((feature, index) => (
             <div
               key={index}
               className="bg-gray-900 rounded-xl p-7 shadow-card hover:shadow-lg hover:-translate-y-1 transition-all border border-gray-800 group"
@@ -127,12 +155,7 @@ function MercedesFeatures({ selectedModelId }) {
           >
             Conheça todos os detalhes do {model.shortName}
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-              />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
             </svg>
           </a>
         </div>

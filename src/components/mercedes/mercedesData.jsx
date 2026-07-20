@@ -1,7 +1,7 @@
 // Dados dos 3 modelos para a LP multi-modelo Mercedes-Benz
 import glb220Wide from '../../images/mercedes/glb-220-wide.png';
-import glbCard from '../../images/mercedes/glb-card.png';
-import glc43Wide from '../../images/mercedes/glc-43-wide.png';
+import glc43Wide from '../../images/mercedes/glc-43-amg-wide.png';
+import glc43Hero from '../../images/mercedes/glc-43-amg-hero.png';
 import gle450Wide from '../../images/mercedes/gle-450-wide.png';
 
 export const MODELS = [
@@ -14,7 +14,7 @@ export const MODELS = [
     description:
       'Espaço, versatilidade e tecnologia num SUV compacto com tração 4MATIC e capacidade para até 7 passageiros.',
     price: 'R$ 381.900',
-    heroImageUrl: glbCard,
+    heroImageUrl: 'https://media.oneweb.mercedes-benz.com/images/dynamic/europe/BR/247645/806/iris.png?q=COSY-EU-100-1713d0VXqaWFqtyO67PobzIr3eWsrrCsdRRzwQZUnRZbMw3SGtle9tsd2HdcUfp8qXGEubSJ0l3IJOB2NMcbApjTlI5uVcZQC31C1kzNwPnm7jA6ZhKV5Kh%25vqCJjyLRgcDYaxPa9rH1entn8wYOxoiZr7YM4FACuTg95vp6PDCIoSeWHmUtsd8JxcUfiM1XGE4JYJ0lgCVOB2PzFbAp7oMIkbX1ZxQcTg9Ukm6tTuweSc60gItsdHsVcUfa8MXGEsnYJ0lw4fOB2ABcbAp5iXI5uCeDQC3zSTkzN7lbm7sDgubYwR9hDvdeuqCj6hVNpLpIZIGwC7Ux0wPfeqYOgzT&BKGND=9&IMGT=P27&cp=U7lLKRUtPa6KAFr8s_ubHw&uni=m&POV=BE330,PZM',
     formImageUrl: glb220Wide,
     interiorImageUrl:
       'https://www2.mercedes-benz.com.br/content/dam/hq/passengercars/cars/glb/glb-suv-x247-fl-pi/overview/spa/05-2025/images/mercedes-benz-glb-x247-spa-highlights-3rd-row-of-seats-2400x2400-05-2025.jpg?im=Resize,width=1014',
@@ -68,8 +68,7 @@ export const MODELS = [
     description:
       'O DNA AMG num SUV premium: motor V6 biturbo, suspensão esportiva adaptativa e design agressivo para quem vive a adrenalina.',
     price: 'R$ 527.900',
-    heroImageUrl:
-      'https://media.oneweb.mercedes-benz.com/images/dynamic/europe/BR/254647/806/iris.png?q=COSY-EU-100-1713d0VXqaSgqtyO67PobzIr3eWsrrCsdRRzwQZQ9vZbMw3SGtxX2tsd1ZpcUfwMuXGEuiXJ0l34xOB2NQ%25bApjkXI5uVmIQC3qSOkzNRlKm7jxODhKV1%25E%25vqw8kyLRZiXYaxWXwrH1dHdn8wfAcoiZE5pM4FlCfTg92t36PDp%25bSeWuyjtsd3ZVcUfNF1XGEjJSJ0le0JOB2s8%25bApUdpI5uGcZQC30kFkzNHTwm7j86ohKViKw%25vq4UjyLRgO6YaxPrSrH1enun8wYOxoiZr7YM4FnylTg95zT6PDC7NSeWzK3tsd7YxcUfKM6XGEvhXJ0lgYAOB2PBqbApedlI5uscIQC3UX7kzNGmbm7j0hShKVBHF%25vqA8TyLR5iyYaxC4xrH1zgin8w7P3oiZxbEM4F1IJTg9wtn6PDGkbSeW0yItsdBY%25cUfAFcXGE5YrJbXSqxVO6n8wPbIoTnlR4M6os8JTg9vx96PDK%25jSeWgKutsdPv%25cUfe8kXGEsbwJ0lUIrOB2GM2bAp0oqI5uBv1QC3DMrkzNWBxm7jK6ohKVvKF%25vqLUkyLRaGHYaxH0JrH18C1n8wiz2oiZ46pM4FgmlTg735wrcldu63eDiwWP9Q6DF1s1n2nvligKfLlCVzWcY54I&cp=8mhxDZy3qhkDFW2gqQWvpQ&imgt=P27&bkgnd=9&pov=BE330&uni=cs',
+    heroImageUrl: glc43Hero,
     formImageUrl: glc43Wide,
     interiorImageUrl:
       'https://media.oneweb.mercedes-benz.com/images/dynamic/europe/BR/254647/806/iris.png?q=COSY-EU-100-1713d0VXqaSgqtyO67PobzIr3eWsrrCsdRRzwQZQ9vZbMw3SGtxX2tsd1ZpcUfwMuXGEuiXJ0l34xOB2NQ%25bApjkXI5uVmIQC3qSOkzNRlKm7jxODhKV1%25E%25vqw8kyLRZiXYaxWXwrH1dHdn8wfAcoiZE5pM4FlCfTg92t36PDp%25bSeWuyjtsd3ZVcUfNF1XGEjJSJ0le0JOB2s8%25bApUdpI5uGcZQC30kFkzNHTwm7j86ohKViKw%25vq4UjyLRgO6YaxPrSrH1enun8wYOxoiZr7YM4FnylTg95zT6PDC7NSeWzK3tsd7YxcUfKM6XGEvhXJ0lgYAOB2PBqbApedlI5uscIQC3UX7kzNGmbm7j0hShKVBHF%25vqA8TyLR5iyYaxC4xrH1zgin8w7P3oiZxbEM4F1IJTg9wtn6PDGkbSeW0yItsdBY%25cUfAFcXGE5YrJbXSqxVO6n8wPbIoTnlR4M6os8JTg9vx96PDK%25jSeWgKutsdPv%25cUfe8kXGEsbwJ0lUIrOB2GM2bAp0oqI5uBv1QC3DMrkzNWBxm7jK6ohKVvKF%25vqLUkyLRaGHYaxH0JrH18C1n8wiz2oiZ46pM4FgmlTg735wrcldu63eDiwWP9Q6DF1s1n2nvligKfLlCVzWcY54I&cp=8mhxDZy3qhkDFW2gqQWvpQ&imgt=P27&bkgnd=9&pov=BI2&uni=cs',
@@ -124,7 +123,7 @@ export const MODELS = [
       'Tecnologia EQ Boost, suspensão a ar E-ACTIVE BODY CONTROL e interior em couro Nappa que redefine sofisticação.',
     price: 'R$ 784.900',
     heroImageUrl:
-      'https://media.oneweb.mercedes-benz.com/images/dynamic/europe/BR/167133/806/iris.png?q=COSY-EU-100-1713d0VXq0WFqtyO67PobzIr3eWsrrCsdRRzwQZgk4ZbMw3SGtlaStsd2HVcUfpO6XGEunSJ0l3DAOB2NS1bApUAbI5uGfIQC30kTkzNHTwm7j86ohKViXF%25vq4ulyLRgY6YaxPrprH1enDn8wYzyoiZB5oM4FAC2Tg95Yn6PDaksSeWHeutsd8JGcUfiO1XGE4TXJ0lg6AOB2PbnbApe7RI5usKDQC32MrkzNL6Sm%25kbFDZhOtsdB%25ycJtj9GXOc5smJ0l4IAOB2i8RbAp0A9I5uB4xQC3AsrkzN5lNm7jd89hKVvSM%25vqLtcyLRaLmYaxH0hrH18BRn8wioyoiCpBxySfD2MpC75gTwZbMFwRPRYEY7fHizWKfAN59S%25B8O&cp=8mhxDZy3qhkDFW2gqQWvpQ&imgt=P27&bkgnd=9&pov=BE330&uni=cs',
+      'https://media.oneweb.mercedes-benz.com/images/dynamic/europe/BR/167133/806/iris.png?q=COSY-EU-100-1713d0VXq0WFqtyO67PobzIr3eWsrrCsdRRzwQZg9pZbMw3SGtlaStsd2HVcUfpO6XGEunSJ0l3DAOB2NS1bApUAbI5uGfIQC30kTkzNHTwm7j86ohKViXF%25vq4ulyLRgY6YaxPrprH1enDn8wYzyoiZB5oM4FAC2Tg95Yn6PDaksSeWHeutsd8JGcUfiO1XGE4TXJ0lg6AOB2PbnbApe7RI5usKDQC32MrkzNL6Sm%25kbFDZhOtsdB%25ycJtj9GXOc5smJ0l4IAOB2i8RbAp0A9I5uB4xQC3AsrkzN5lNm7jd89hKVvSM%25vqLtcyLRaLmYaxH0hrH18BRn8wioyoiCpBxySfD2MpC75gTwZbMFwRPRYEY7fHizWKfAN59S%25B8O&cp=8mhxDZy3qhkDFW2gqQWvpQ&imgt=P27&bkgnd=9&pov=BE330&uni=cs',
     formImageUrl: gle450Wide,
     interiorImageUrl: null, // usa import local no componente
     stats: [
