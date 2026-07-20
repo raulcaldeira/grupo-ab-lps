@@ -17,7 +17,7 @@ export const MODELS = [
     heroImageUrl: 'https://media.oneweb.mercedes-benz.com/images/dynamic/europe/BR/247645/806/iris.png?q=COSY-EU-100-1713d0VXqaWFqtyO67PobzIr3eWsrrCsdRRzwQZUnRZbMw3SGtle9tsd2HdcUfp8qXGEubSJ0l3IJOB2NMcbApjTlI5uVcZQC31C1kzNwPnm7jA6ZhKV5Kh%25vqCJjyLRgcDYaxPa9rH1entn8wYOxoiZr7YM4FACuTg95vp6PDCIoSeWHmUtsd8JxcUfiM1XGE4JYJ0lgCVOB2PzFbAp7oMIkbX1ZxQcTg9Ukm6tTuweSc60gItsdHsVcUfa8MXGEsnYJ0lw4fOB2ABcbAp5iXI5uCeDQC3zSTkzN7lbm7sDgubYwR9hDvdeuqCj6hVNpLpIZIGwC7Ux0wPfeqYOgzT&BKGND=9&IMGT=P27&cp=U7lLKRUtPa6KAFr8s_ubHw&uni=m&POV=BE330,PZM',
     formImageUrl: glb220Wide,
     interiorImageUrl:
-      'https://www2.mercedes-benz.com.br/content/dam/hq/passengercars/cars/glb/glb-suv-x247-fl-pi/overview/spa/05-2025/images/mercedes-benz-glb-x247-spa-highlights-3rd-row-of-seats-2400x2400-05-2025.jpg?im=Resize,width=1014',
+      'https://media.oneweb.mercedes-benz.com/images/static/v1/23683/2/2b/69f55b7f396ff278e96a679345740d2f5c7fb.jpg?im=Resize,width=1200',
     stats: [
       { value: '190 cv', label: 'de potência' },
       { value: '7,9s', label: '0–100 km/h' },

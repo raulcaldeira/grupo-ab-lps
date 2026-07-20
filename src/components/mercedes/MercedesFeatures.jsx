@@ -94,11 +94,11 @@ function MercedesFeatures({ selectedModelId }) {
           Três SUVs premium com DNA Mercedes-Benz — cada um com seu perfil, todos com o mesmo padrão de excelência.
         </p>
 
-        {/* Interior image */}
+        {/* Interior image — specific to selected model */}
         <div className="mb-12 rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10">
           <img
-            src={gleInterior}
-            alt="Interior Mercedes-Benz GL"
+            src={model.interiorImageUrl ?? gleInterior}
+            alt={`Interior ${model.name}`}
             className="w-full h-64 md:h-96 object-cover"
           />
         </div>
