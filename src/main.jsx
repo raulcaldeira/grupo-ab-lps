@@ -71,7 +71,7 @@ const seo = isVolvo
 const favicon = document.createElement('link');
 favicon.rel = 'icon';
 favicon.type = 'image/svg+xml';
-favicon.href = isVolvo ? '/favicon-volvo.svg' : '/favicon-mercedes.svg';
+favicon.href = isVolvo ? `${import.meta.env.BASE_URL}favicon-volvo.svg` : `${import.meta.env.BASE_URL}favicon-mercedes.svg`;
 document.head.appendChild(favicon);
 
 // Apply SEO tags
