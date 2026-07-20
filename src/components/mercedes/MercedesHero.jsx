@@ -9,6 +9,13 @@ function MercedesHero({ selectedModelId, onSelectModel }) {
   const formRef = useRef(null);
 
   useEffect(() => {
+    MODELS.forEach((m) => {
+      const img = new Image();
+      img.src = m.formImageUrl ?? m.heroImageUrl;
+    });
+  }, []);
+
+  useEffect(() => {
     const ids = MODELS.map((m) => m.id).filter((id) => id !== selectedModelId);
     let i = 0;
     const next = () => {
